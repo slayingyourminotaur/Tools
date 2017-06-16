@@ -1,0 +1,7 @@
+The purpose of this file is to list websites and descriptions about them
+that have been found useful.
+
+Github site for Microsoft's Tiger Team which contains various tools which
+they have accumulated over time for their own use.
+- https://github.com/Microsoft/tigertoolbox
+
