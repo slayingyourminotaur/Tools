@@ -68,4 +68,12 @@ SELECT fk.Name AS 'FKName'
                 ON  fkc.referenced_object_id = cref.object_id
                 AND fkc.referenced_column_id = cref.column_id
 
-				
+/*
+	This query demonstrates the use of COLLATE to search a column
+	using LIKE, but without case-sensitivity. By default SQL server
+	tables are case-insensitive, but sometimes tables are created
+	otherwise.
+*/
+SELECT DATA_ELEMENT, SOURCE, COMPUTED_COLUMN_CODE, I_DESCRIPTOR
+FROM dbo.CDD
+WHERE COMPUTED_COLUMN_CODE LIKE '%Match%' COLLATE SQL_Latin1_General_CP1_CI_AS
